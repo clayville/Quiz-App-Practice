@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tbD-z6-pVv">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--QuizVC-->
+        <scene sceneID="aZ9-DF-g4U">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="tbD-z6-pVv" customClass="QuizVC" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="as2-C3-2RR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="4gP-cL-yVC">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQJ-Bx-pPZ">
+                                <rect key="frame" x="97.666666666666671" y="405" width="194.66666666666663" height="34.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkV-0g-occ">
+                                <rect key="frame" x="102.66666666666669" y="749" width="185" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="OFo-uX-Edx"/>
+                                    <constraint firstAttribute="height" constant="51" id="cd1-9N-eCD"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="False">
+                                    <backgroundConfiguration key="background" image="button1"/>
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNk-kw-t3q">
+                                <rect key="frame" x="102.66666666666669" y="678" width="185" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="UQd-i7-oUV"/>
+                                    <constraint firstAttribute="height" constant="51" id="dEs-ux-tkz"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="True">
+                                    <backgroundConfiguration key="background" image="button1"/>
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="rG1-Sh-k3R">
+                                <rect key="frame" x="-160" y="77" width="710" height="228"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="95R-F1-gLz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4gP-cL-yVC" secondAttribute="trailing" id="5qa-c1-AGQ"/>
+                            <constraint firstItem="NQJ-Bx-pPZ" firstAttribute="top" secondItem="rG1-Sh-k3R" secondAttribute="bottom" constant="100" id="7Mb-fb-luG"/>
+                            <constraint firstItem="DNk-kw-t3q" firstAttribute="trailing" secondItem="AkV-0g-occ" secondAttribute="trailing" id="7tO-Gw-edU"/>
+                            <constraint firstItem="DNk-kw-t3q" firstAttribute="leading" secondItem="AkV-0g-occ" secondAttribute="leading" id="A4x-Ri-NmA"/>
+                            <constraint firstItem="rG1-Sh-k3R" firstAttribute="top" secondItem="95R-F1-gLz" secondAttribute="top" constant="30" id="JkY-qI-XqY"/>
+                            <constraint firstItem="AkV-0g-occ" firstAttribute="top" secondItem="DNk-kw-t3q" secondAttribute="bottom" constant="20" id="KfX-Co-yR9"/>
+                            <constraint firstItem="NQJ-Bx-pPZ" firstAttribute="centerX" secondItem="as2-C3-2RR" secondAttribute="centerX" id="TEF-Ix-WU4"/>
+                            <constraint firstAttribute="bottom" secondItem="4gP-cL-yVC" secondAttribute="bottom" id="cVN-5y-b1O"/>
+                            <constraint firstItem="rG1-Sh-k3R" firstAttribute="centerX" secondItem="as2-C3-2RR" secondAttribute="centerX" id="gNa-A7-W1C"/>
+                            <constraint firstItem="4gP-cL-yVC" firstAttribute="top" secondItem="as2-C3-2RR" secondAttribute="top" id="gbT-3R-J8E"/>
+                            <constraint firstItem="NQJ-Bx-pPZ" firstAttribute="centerY" secondItem="as2-C3-2RR" secondAttribute="centerY" id="gn1-1l-di8"/>
+                            <constraint firstItem="4gP-cL-yVC" firstAttribute="leading" secondItem="as2-C3-2RR" secondAttribute="leading" id="gzL-f2-Bba"/>
+                            <constraint firstItem="95R-F1-gLz" firstAttribute="bottom" secondItem="AkV-0g-occ" secondAttribute="bottom" constant="10" id="rsT-I8-seN"/>
+                            <constraint firstItem="AkV-0g-occ" firstAttribute="centerX" secondItem="as2-C3-2RR" secondAttribute="centerX" id="t91-9E-4ZK"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2E-i5-MP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40" y="-61.137440758293835"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rectangle" width="414" height="896"/>
+        <image name="button1" width="288" height="75"/>
+        <image name="car" width="710" height="638"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
