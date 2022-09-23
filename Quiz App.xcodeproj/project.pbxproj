@@ -60,14 +60,30 @@
 			children = (
 				B04B30F028DC9332007A8A5B /* AppDelegate.swift */,
 				B04B30F228DC9332007A8A5B /* SceneDelegate.swift */,
-				B04B310628DCA0C3007A8A5B /* QuizModel.swift */,
-				B04B310428DC93DF007A8A5B /* QuizVC.swift */,
+				B0E5453D28DDABAE004EC97E /* Model */,
+				B0E5453E28DDABCD004EC97E /* Controller */,
 				B04B30F628DC9332007A8A5B /* Main.storyboard */,
 				B04B30F928DC9337007A8A5B /* Assets.xcassets */,
 				B04B30FB28DC9337007A8A5B /* LaunchScreen.storyboard */,
 				B04B30FE28DC9337007A8A5B /* Info.plist */,
 			);
 			path = "Quiz App";
+			sourceTree = "<group>";
+		};
+		B0E5453D28DDABAE004EC97E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B04B310628DCA0C3007A8A5B /* QuizModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B0E5453E28DDABCD004EC97E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B04B310428DC93DF007A8A5B /* QuizVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
